@@ -1,6 +1,6 @@
 # React from scratch
 
-## Made with lessons
+## Inspired from lessons
 * https://github.com/rajeshpillai/udemy-student-create-your-own-react-fasttrack
 * https://www.youtube.com/playlist?list=PLNIn9uF_2Il7oTVfQtFeb83D3XWhC7oSt
 
@@ -11,6 +11,6 @@ $ npm i
 
 ## Run
 ```sh
-$ make start
-# open http://localhost:5000
+$ npm run start
+# open http://localhost:8000
 ```
