@@ -1,4 +1,4 @@
-# Fakeact from scratch
+# Fakeact
 
 ## Inspired from lessons
 * https://github.com/rajeshpillai/udemy-student-create-your-own-react-fasttrack
