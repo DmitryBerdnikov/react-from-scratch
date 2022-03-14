@@ -4,7 +4,6 @@ const root = document.getElementById('root');
 
 const App1 = (
   <div id="test" onClick={() => console.log('test')}>
-    <div>Test</div>
     <p className="text"><span>One</span><span>Two</span></p>
     {2 === 1 && <div>False</div>}
     simple text
