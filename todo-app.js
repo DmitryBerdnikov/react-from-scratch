@@ -28,4 +28,11 @@ const root = document.getElementById('root');
 
 const Heart = (props) => <span style={props.style}>test</span>;
 
-FakeReact.render(<Heart style="color: red;" />, root);
+const Button = (props) => {
+  return <button onClick={props.onClick}>{props.children}</button>
+}
+
+const Greeting = (props) =>
+  <Button onClick={() => console.log(props.message)}>another text</Button>
+
+FakeReact.render(<Greeting message="Good day" />, root);
