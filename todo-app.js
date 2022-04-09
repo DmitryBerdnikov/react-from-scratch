@@ -35,4 +35,22 @@ const Button = (props) => {
 const Greeting = (props) =>
   <Button onClick={() => console.log(props.message)}>another text</Button>
 
-FakeReact.render(<Greeting message="Good day" />, root);
+// FakeReact.render(<Greeting message="Good day" />, root);
+
+// stateful component
+
+class Alert extends FakeReact.Component {
+  constructor() {
+    this.state = {};
+  }
+
+  render() {
+    return (
+      <div className="container">
+        <h2>Heading 2</h2>
+      </div>
+    )
+  }
+}
+
+FakeReact.render(<Alert />, root);
