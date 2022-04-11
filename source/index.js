@@ -1,4 +1,5 @@
 /** @jsx FakeReact.createElement */
+import FakeReact from '../lib/lib';
 
 const root = document.getElementById('root');
 
