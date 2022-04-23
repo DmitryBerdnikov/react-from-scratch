@@ -43,13 +43,23 @@ const root = document.getElementById('root');
 class Alert extends FakeReact.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      title: 'Default title'
+    };
+
+    this.changeTitle = this.changeTitle.bind(this);
+  }
+
+  changeTitle() {
+    this.setState({ title: new Date().toString() })
   }
 
   render() {
     return (
       <div className="container">
-        <h2 onClick={() => alert(1)}>Heading 2</h2>
+        <h1>{this.state.title}</h1>
+        <button onClick={this.changeTitle}>change title</button>
+        <button onClick={() => console.log('test')}>Show console text</button>
       </div>
     )
   }
