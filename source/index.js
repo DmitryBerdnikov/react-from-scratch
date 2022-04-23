@@ -27,13 +27,32 @@ const root = document.getElementById('root');
 //   FakeReact.render(App2, root);
 // }, 1000);
 
-const Heart = (props) => <span style={props.style}>test</span>;
+// const Heart = (props) => <span style={props.style}>test</span>;
 
-const Button = (props) => {
-  return <button onClick={props.onClick}>{props.children}</button>
+// const Button = (props) => {
+//   return <button onClick={props.onClick}>{props.children}</button>
+// }
+
+// const Greeting = (props) =>
+//   <Button onClick={() => console.log(props.message)}>another text</Button>
+
+// FakeReact.render(<Greeting message="Good day" />, root);
+
+// stateful component
+
+class Alert extends FakeReact.Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+
+  render() {
+    return (
+      <div className="container">
+        <h2 onClick={() => alert(1)}>Heading 2</h2>
+      </div>
+    )
+  }
 }
 
-const Greeting = (props) =>
-  <Button onClick={() => console.log(props.message)}>another text</Button>
-
-FakeReact.render(<Greeting message="Good day" />, root);
+FakeReact.render(<Alert />, root);
