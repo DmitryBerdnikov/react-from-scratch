@@ -46,8 +46,10 @@ class Alert extends FakeReact.Component {
     this.state = {
       title: 'Default title'
     };
+  }
 
-    this.changeTitle = this.changeTitle.bind(this);
+  updateTitle() {
+    this.setState({ title: 'new Title' })
   }
 
   changeTitle() {
@@ -55,14 +57,8 @@ class Alert extends FakeReact.Component {
   }
 
   render() {
-    return (
-      <div className="container">
-        <h1>{this.state.title}</h1>
-        <button onClick={this.changeTitle}>change title</button>
-        <button onClick={() => console.log('test')}>Show console text</button>
-      </div>
-    )
+    return <h1 onClick={this.updateTitle.bind(this)}>{this.state.title}</h1>
   }
 }
 
-FakeReact.render(<Alert />, root);
+FakeReact.render(<Alert title="bar" />, root);
